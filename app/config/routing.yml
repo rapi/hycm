@@ -1,0 +1,12 @@
+user_registration:
+    path:     /register
+    defaults: { _controller: AppBundle:Registration:register }
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+root:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /login
+        permanent: true

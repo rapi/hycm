@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %} {% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 m-3">
+        </div>
+        <div class="col-sm-4">
+
+            <form name="user" method="post">
+                <div>
+                    <label for="user_username" class="required">Username</label>
+                    <input type="text" class="form-control" id="user_username" name="user[username]" required="required" />
+                </div>
+                <div>
+                    <label for="user_fname" class="required">First Name</label>
+                    <input type="text" class="form-control" id="user_fname" name="user[fname]" required="required" />
+                </div>
+                <div>
+                    <label for="user_lname" class="required">Last Name</label>
+                    <input type="text" class="form-control" id="user_lname" name="user[lname]" required="required" />
+                </div>
+                <div>
+                    <label for="user_email" class="required">Email</label>
+                    <input type="email" class="form-control" id="user_email" name="user[email]" required="required" />
+                </div>
+                <div>
+                    <label for="user_plainPassword_first" class="required">Password</label>
+                    <input type="password" class="form-control" id="user_plainPassword_first" name="user[plainPassword][first]"
+                        required="required" />
+                </div>
+                <div>
+                    <label for="user_plainPassword_second" class="required">Repeat Password</label>
+                    <input type="password" class="form-control" id="user_plainPassword_second" name="user[plainPassword][second]"
+                        required="required" />
+                </div>
+                <div>
+                    <label for="language" class="required">Language</label>
+                    <select class="form-control" type="password" class="form-control" id="language" name="user[language]"
+                        required="required">
+                        <option selected value="en">English</option>
+                        <option  value="ro">Romanian</option>
+                    </select>
+                </div>
+                <br>
+
+                <button class="btn btn-primary" type="submit">Register!</button>
+                <input type="hidden" id="user__token" name="user[_token]" value="5VuFtjfwV0ElspC5XHwAIPWtj6OcXXRwYWea0irfaSo" />
+            </form>
+        </div>
+        <div class="col-sm-4">
+        </div>
+    </div>
+</div>
+{% endblock %}
