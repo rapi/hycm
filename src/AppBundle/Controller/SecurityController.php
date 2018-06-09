@@ -28,7 +28,8 @@ class SecurityController extends Controller
             $this->get('translator')->setLocale($lastUser[0]->getLanguage());
         if($lastUsername)    
              $error= $this->get('translator')->trans('Wrong details');
-        
+        else
+            $error=false;
         return $this->render('security/login.html.twig', array(
             'last_username' => $lastUsername,
             'error'         => $error,
